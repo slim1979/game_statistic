@@ -17,6 +17,7 @@ class Indicator < ApplicationRecord
   end
 
   def sorted(players, count)
-    players.sort { |a, b| a.indicators.count <=> b.indicators.count }.reverse.first(count)
+    players = players.sort { |a, b| b.indicators.count <=> a.indicators.count }
+    players.reject{|p| p.indicators.count.zero?}
   end
 end
