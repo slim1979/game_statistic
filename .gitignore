@@ -28,3 +28,4 @@
 /config/database.yml
 /config/storage.yml
 /config/cable.yml
+/.idea
